@@ -14,7 +14,7 @@ export function Logo({ className, variant = "default" }: LogoProps) {
       <span
         className={cn(
           "font-serif text-xl tracking-tight",
-          isLight ? "text-white" : "text-green-deep"
+          isLight ? "text-white" : "text-green-deep",
         )}
       >
         Jann
@@ -22,7 +22,7 @@ export function Logo({ className, variant = "default" }: LogoProps) {
       <span
         className={cn(
           "font-sans text-sm font-normal",
-          isLight ? "text-white/70" : "text-green-deep/70"
+          isLight ? "text-white/70" : "text-green-deep/70",
         )}
       >
         Inc

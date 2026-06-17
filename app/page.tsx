@@ -37,8 +37,7 @@ export default function HomePage() {
           </h1>
 
           <p className="mt-8 mx-auto max-w-2xl text-base leading-relaxed text-zinc-600">
-            Jann Inc is a product studio creating focused software tools
-            across finance, health, education, and beyond.
+            A product studio obsessed with building things that work.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -21,17 +21,18 @@ export function OurStory() {
               <div className="space-y-5 text-muted-foreground leading-relaxed">
                 <p>
                   Jann Inc started with a simple observation: the best software
-                  isn&apos;t built in boardrooms — it&apos;s built by people who
-                  understand real problems in real communities.
+                  isn&apos;t built in boardrooms. it&apos;s built by people who
+                  care deeply about the problems they&apos;re solving.
                 </p>
                 <p>
-                  We&apos;re a product studio focused on finance, health, and
-                  education — verticals where thoughtful tools can change how
-                  people work, learn, and grow.
+                  We started small. One builder, one product, one problem worth
+                  solving. That&apos;s still how we think today: focused,
+                  intentional, and obsessed with getting the details right.
                 </p>
                 <p className="text-foreground font-medium">
-                  Jann Inc was built with a simple belief — great software
-                  should be accessible to everyone, everywhere.
+                  Jann Inc was built on a simple belief: great software should
+                  just work. No bloat, no noise, just tools that do exactly what
+                  they promise.
                 </p>
               </div>
             </div>
