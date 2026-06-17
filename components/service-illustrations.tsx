@@ -31,372 +31,337 @@ export function ServiceIllustration({
 }
 
 function HeroIllustration() {
+  const green = "#1a4d2e";
   return (
     <svg viewBox="0 0 400 320" className="h-full w-full" aria-hidden="true">
-      <defs>
-        <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#1a4d2e" stopOpacity="0.12" />
-          <stop offset="100%" stopColor="#1a4d2e" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-      <rect width="400" height="320" fill="url(#heroGlow)" rx="16" />
-      <rect
-        x="120"
-        y="80"
-        width="160"
-        height="110"
-        rx="8"
-        fill="#1a4d2e"
-        fillOpacity="0.08"
-        stroke="#1a4d2e"
-        strokeWidth="2"
-      />
-      <path
-        d="M130 180 H270 L280 195 H120 Z"
-        fill="#1a4d2e"
-        fillOpacity="0.1"
-        stroke="#1a4d2e"
-        strokeWidth="2"
-      />
-      <text x="175" y="140" fill="#1a4d2e" fontSize="28" fontFamily="monospace">
-        {"</>"}
-      </text>
+      <rect width="400" height="320" fill="#f0f7f2" rx="16" />
+      <circle cx="200" cy="160" r="72" fill={green} fillOpacity="0.06" />
       <circle
-        cx="310"
-        cy="70"
-        r="28"
-        fill="#1a4d2e"
-        fillOpacity="0.06"
-        stroke="#1a4d2e"
-        strokeWidth="1.5"
-      />
-      <path
-        d="M298 70 C305 58 322 58 328 70 C335 82 322 92 310 88 C298 92 285 82 292 70 Z"
-        fill="#1a4d2e"
-        fillOpacity="0.15"
-      />
-      <rect
-        x="60"
-        y="200"
-        width="36"
-        height="56"
-        rx="6"
-        fill="#1a4d2e"
-        fillOpacity="0.06"
-        stroke="#1a4d2e"
-        strokeWidth="1.5"
-      />
-      <circle cx="78" cy="248" r="3" fill="#1a4d2e" fillOpacity="0.3" />
-      <path
-        d="M55 120 C70 100 95 95 110 110"
-        stroke="#e8a020"
-        strokeWidth="2"
+        cx="200"
+        cy="160"
+        r="48"
         fill="none"
-        strokeLinecap="round"
-      />
-      <circle
-        cx="90"
-        cy="130"
-        r="22"
-        fill="#1a4d2e"
-        fillOpacity="0.1"
-        stroke="#1a4d2e"
+        stroke={green}
         strokeWidth="2"
+        strokeOpacity="0.2"
       />
-      <path
-        d="M78 125 Q90 115 102 125"
-        stroke="#1a4d2e"
-        strokeWidth="2"
-        fill="none"
-      />
-      <circle cx="84" cy="132" r="2" fill="#1a4d2e" />
-      <circle cx="96" cy="132" r="2" fill="#1a4d2e" />
-      <path
-        d="M86 140 Q90 145 94 140"
-        stroke="#1a4d2e"
-        strokeWidth="1.5"
-        fill="none"
-      />
+
+      {/* Hub */}
+      <circle cx="200" cy="160" r="22" fill={green} fillOpacity="0.12" stroke={green} strokeWidth="2" />
+      <path d="M192 160 H208 M200 152 V168" stroke={green} strokeWidth="2" strokeLinecap="round" />
+
+      {/* Code — top */}
+      <g transform="translate(200, 72)">
+        <circle r="28" fill={green} fillOpacity="0.08" stroke={green} strokeWidth="1.5" />
+        <text y="6" textAnchor="middle" fill={green} fontSize="16" fontFamily="monospace">
+          {"</>"}
+        </text>
+      </g>
+      <line x1="200" y1="100" x2="200" y2="138" stroke={green} strokeWidth="1.5" strokeDasharray="4 4" strokeOpacity="0.4" />
+
+      {/* Cloud — right */}
+      <g transform="translate(310, 160)">
+        <circle r="28" fill="#5b21b6" fillOpacity="0.08" stroke="#5b21b6" strokeWidth="1.5" />
+        <path
+          d="M-14 4 C-8 -6 6 -6 10 4 C18 4 18 14 10 16 C8 22 -4 22 -6 16 C-14 14 -14 8 -10 6"
+          fill="#5b21b6"
+          fillOpacity="0.15"
+          stroke="#5b21b6"
+          strokeWidth="1.2"
+        />
+      </g>
+      <line x1="282" y1="160" x2="222" y2="160" stroke={green} strokeWidth="1.5" strokeDasharray="4 4" strokeOpacity="0.4" />
+
+      {/* Lightbulb — bottom */}
+      <g transform="translate(200, 248)">
+        <circle r="28" fill="#1d4ed8" fillOpacity="0.08" stroke="#1d4ed8" strokeWidth="1.5" />
+        <path
+          d="M0 -12 C8 -12 12 -4 10 4 L6 12 H-6 L-10 4 C-12 -4 -8 -12 0 -12 Z"
+          fill="#1d4ed8"
+          fillOpacity="0.15"
+          stroke="#1d4ed8"
+          strokeWidth="1.2"
+        />
+      </g>
+      <line x1="200" y1="220" x2="200" y2="182" stroke={green} strokeWidth="1.5" strokeDasharray="4 4" strokeOpacity="0.4" />
+
+      {/* AI chip — left */}
+      <g transform="translate(90, 160)">
+        <circle r="28" fill="#b45309" fillOpacity="0.08" stroke="#b45309" strokeWidth="1.5" />
+        <rect x="-12" y="-12" width="24" height="24" rx="3" fill="none" stroke="#b45309" strokeWidth="1.5" />
+        <circle cx="0" cy="0" r="5" fill="#b45309" fillOpacity="0.2" />
+      </g>
+      <line x1="118" y1="160" x2="178" y2="160" stroke={green} strokeWidth="1.5" strokeDasharray="4 4" strokeOpacity="0.4" />
     </svg>
   );
 }
 
 function CustomSoftwareIllustration() {
+  const color = "#1a4d2e";
   return (
-    <svg viewBox="0 0 360 280" className="h-full w-full p-6" aria-hidden="true">
+    <svg viewBox="0 0 360 280" className="h-full w-full" aria-hidden="true">
       <rect width="360" height="280" fill="#edfaf3" rx="16" />
-      <rect
-        x="80"
-        y="40"
-        width="200"
-        height="130"
-        rx="6"
-        fill="none"
-        stroke="#1a4d2e"
-        strokeWidth="2"
-      />
-      <path
-        d="M90 160 H270 L285 180 H75 Z"
-        fill="#1a4d2e"
-        fillOpacity="0.1"
-        stroke="#1a4d2e"
-        strokeWidth="2"
-      />
-      <text x="155" y="110" fill="#1a4d2e" fontSize="24" fontFamily="monospace">
+
+      {/* Laptop */}
+      <rect x="72" y="56" width="180" height="118" rx="8" fill="white" stroke={color} strokeWidth="2" />
+      <rect x="84" y="68" width="156" height="88" rx="4" fill={color} fillOpacity="0.06" />
+      <text x="148" y="122" textAnchor="middle" fill={color} fontSize="28" fontFamily="monospace">
         {"</>"}
       </text>
-      <rect
-        x="40"
-        y="190"
-        width="280"
-        height="50"
-        rx="6"
-        fill="#1a4d2e"
-        fillOpacity="0.08"
-        stroke="#1a4d2e"
-        strokeWidth="1.5"
+      <path
+        d="M62 174 H262 L278 196 H46 Z"
+        fill="white"
+        stroke={color}
+        strokeWidth="2"
+        strokeLinejoin="round"
       />
-      <circle
-        cx="70"
-        cy="215"
-        r="8"
+
+      {/* Mobile app */}
+      <rect x="268" y="88" width="52" height="88" rx="8" fill="white" stroke={color} strokeWidth="2" />
+      <rect x="276" y="100" width="36" height="56" rx="3" fill={color} fillOpacity="0.08" />
+      <rect x="284" y="108" width="20" height="4" rx="2" fill={color} fillOpacity="0.3" />
+      <rect x="284" y="118" width="16" height="4" rx="2" fill={color} fillOpacity="0.2" />
+      <rect x="284" y="128" width="18" height="4" rx="2" fill={color} fillOpacity="0.2" />
+      <circle cx="294" cy="168" r="4" fill={color} fillOpacity="0.25" />
+
+      {/* Integration arrows */}
+      <path
+        d="M248 130 H262 M256 124 L262 130 L256 136"
+        stroke={color}
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         fill="none"
-        stroke="#1a4d2e"
-        strokeWidth="1.5"
+        strokeOpacity="0.5"
       />
-      <line
-        x1="95"
-        y1="205"
-        x2="130"
-        y2="205"
-        stroke="#1a4d2e"
-        strokeWidth="1.5"
-      />
-      <line
-        x1="95"
-        y1="220"
-        x2="115"
-        y2="220"
-        stroke="#1a4d2e"
-        strokeWidth="1.5"
-      />
-      <rect
-        x="160"
-        y="200"
-        width="40"
-        height="30"
-        rx="3"
-        fill="none"
-        stroke="#1a4d2e"
-        strokeWidth="1.5"
-      />
-      <circle
-        cx="250"
-        cy="215"
-        r="12"
-        fill="none"
-        stroke="#1a4d2e"
-        strokeWidth="1.5"
-      />
+
+      {/* Stacked modules */}
+      <rect x="88" y="210" width="64" height="36" rx="4" fill="white" stroke={color} strokeWidth="1.5" />
+      <rect x="100" y="220" width="40" height="6" rx="2" fill={color} fillOpacity="0.2" />
+      <rect x="100" y="232" width="28" height="6" rx="2" fill={color} fillOpacity="0.12" />
+
+      <rect x="164" y="210" width="64" height="36" rx="4" fill="white" stroke={color} strokeWidth="1.5" />
+      <rect x="176" y="220" width="40" height="6" rx="2" fill={color} fillOpacity="0.2" />
+      <rect x="176" y="232" width="28" height="6" rx="2" fill={color} fillOpacity="0.12" />
+
+      <rect x="240" y="210" width="64" height="36" rx="4" fill="white" stroke={color} strokeWidth="1.5" />
+      <rect x="252" y="220" width="40" height="6" rx="2" fill={color} fillOpacity="0.2" />
+      <rect x="252" y="232" width="28" height="6" rx="2" fill={color} fillOpacity="0.12" />
     </svg>
   );
 }
 
 function B2BSaasIllustration() {
+  const color = "#5b21b6";
   return (
-    <svg viewBox="0 0 360 280" className="h-full w-full p-6" aria-hidden="true">
+    <svg viewBox="0 0 360 280" className="h-full w-full" aria-hidden="true">
       <rect width="360" height="280" fill="#f0edff" rx="16" />
+
+      {/* Cloud */}
       <path
-        d="M140 60 C155 45 185 45 200 60 C215 45 245 45 260 60 C275 55 290 65 290 80 C300 85 300 100 290 108 C295 120 280 130 265 125 C255 140 230 140 220 125 C205 135 180 135 170 120 C155 125 140 115 145 100 C135 95 135 80 145 75 C145 68 150 62 140 60 Z"
-        fill="#5b21b6"
+        d="M130 72 C145 52 185 52 200 72 C218 58 248 68 252 92 C272 96 278 118 262 132 C268 148 248 158 230 150 C218 168 188 168 176 150 C158 158 138 148 144 128 C128 122 126 98 142 88 C138 78 132 72 130 72 Z"
+        fill={color}
         fillOpacity="0.12"
-        stroke="#5b21b6"
+        stroke={color}
         strokeWidth="2"
       />
-      <rect
-        x="155"
-        y="145"
-        width="50"
-        height="70"
-        rx="4"
-        fill="#5b21b6"
-        fillOpacity="0.1"
-        stroke="#5b21b6"
-        strokeWidth="1.5"
-      />
-      <rect
-        x="160"
-        y="150"
-        width="40"
-        height="8"
-        rx="2"
-        fill="#5b21b6"
-        fillOpacity="0.2"
-      />
-      <rect
-        x="160"
-        y="163"
-        width="40"
-        height="8"
-        rx="2"
-        fill="#5b21b6"
-        fillOpacity="0.15"
-      />
-      <rect
-        x="160"
-        y="176"
-        width="40"
-        height="8"
-        rx="2"
-        fill="#5b21b6"
-        fillOpacity="0.1"
-      />
-      <rect
-        x="100"
-        y="170"
-        width="50"
-        height="35"
-        rx="4"
+
+      {/* Connection lines */}
+      <line x1="180" y1="148" x2="180" y2="168" stroke={color} strokeWidth="1.5" strokeOpacity="0.4" />
+      <line x1="140" y1="168" x2="220" y2="168" stroke={color} strokeWidth="1.5" strokeOpacity="0.4" />
+      <line x1="140" y1="168" x2="140" y2="188" stroke={color} strokeWidth="1.5" strokeOpacity="0.4" />
+      <line x1="220" y1="168" x2="220" y2="188" stroke={color} strokeWidth="1.5" strokeOpacity="0.4" />
+
+      {/* Multi-tenant server stacks */}
+      {[100, 160, 220].map((x) => (
+        <g key={x}>
+          <rect x={x} y="188" width="40" height="64" rx="4" fill="white" stroke={color} strokeWidth="1.5" />
+          <rect x={x + 6} y="198" width="28" height="8" rx="2" fill={color} fillOpacity="0.2" />
+          <rect x={x + 6} y="212" width="28" height="8" rx="2" fill={color} fillOpacity="0.15" />
+          <rect x={x + 6} y="226" width="28" height="8" rx="2" fill={color} fillOpacity="0.1" />
+          <circle cx={x + 20} cy="242" r="3" fill={color} fillOpacity="0.35" />
+        </g>
+      ))}
+
+      {/* Subscription cycle */}
+      <path
+        d="M72 230 A 28 28 0 1 1 72 226"
         fill="none"
-        stroke="#5b21b6"
+        stroke={color}
         strokeWidth="1.5"
+        strokeOpacity="0.35"
       />
-      <circle
-        cx="220"
-        cy="185"
-        r="22"
+      <path
+        d="M68 228 L72 222 L76 228"
+        stroke={color}
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         fill="none"
-        stroke="#5b21b6"
-        strokeWidth="1.5"
+        strokeOpacity="0.35"
       />
-      <circle cx="220" cy="185" r="8" fill="#5b21b6" fillOpacity="0.2" />
+
+      {/* API badge */}
+      <rect x="268" y="200" width="56" height="32" rx="6" fill="white" stroke={color} strokeWidth="1.5" />
+      <text x="296" y="220" textAnchor="middle" fill={color} fontSize="11" fontFamily="monospace" fontWeight="bold">
+        API
+      </text>
     </svg>
   );
 }
 
 function ConsultancyIllustration() {
+  const color = "#1d4ed8";
   return (
-    <svg viewBox="0 0 360 280" className="h-full w-full p-6" aria-hidden="true">
+    <svg viewBox="0 0 360 280" className="h-full w-full" aria-hidden="true">
       <rect width="360" height="280" fill="#eff6ff" rx="16" />
+
+      {/* Lightbulb */}
       <path
-        d="M180 50 C200 50 215 70 210 90 L195 130 L165 130 L150 90 C145 70 160 50 180 50 Z"
-        fill="#1d4ed8"
-        fillOpacity="0.1"
-        stroke="#1d4ed8"
+        d="M180 48 C200 48 216 66 212 86 L200 118 L160 118 L148 86 C144 66 160 48 180 48 Z"
+        fill={color}
+        fillOpacity="0.12"
+        stroke={color}
         strokeWidth="2"
       />
-      <rect
-        x="172"
-        y="130"
-        width="16"
-        height="20"
-        fill="#1d4ed8"
-        fillOpacity="0.15"
-      />
-      <line
-        x1="160"
-        y1="155"
-        x2="200"
-        y2="155"
-        stroke="#1d4ed8"
-        strokeWidth="2"
-      />
-      <circle
-        cx="100"
-        cy="200"
-        r="35"
-        fill="none"
-        stroke="#1d4ed8"
-        strokeWidth="2"
-      />
-      <line
-        x1="130"
-        y1="225"
-        x2="155"
-        y2="250"
-        stroke="#1d4ed8"
-        strokeWidth="2"
-      />
-      <circle
-        cx="270"
-        cy="210"
-        r="30"
-        fill="none"
-        stroke="#1d4ed8"
-        strokeWidth="1.5"
-      />
-      <path
-        d="M270 195 L275 215 L295 215 L280 227 L285 247 L270 235 L255 247 L260 227 L245 215 L265 215 Z"
-        fill="#1d4ed8"
-        fillOpacity="0.15"
-        stroke="#1d4ed8"
-        strokeWidth="1"
-      />
+      <rect x="168" y="118" width="24" height="14" rx="2" fill={color} fillOpacity="0.2" />
+      <line x1="156" y1="136" x2="204" y2="136" stroke={color} strokeWidth="2" strokeLinecap="round" />
+
+      {/* Roadmap line */}
+      <line x1="60" y1="200" x2="300" y2="200" stroke={color} strokeWidth="2" strokeOpacity="0.25" />
+
+      {/* Milestones */}
+      {[
+        { x: 80, label: "1" },
+        { x: 150, label: "2" },
+        { x: 220, label: "3" },
+        { x: 290, label: "4" },
+      ].map((step, i) => (
+        <g key={step.x}>
+          <circle
+            cx={step.x}
+            cy="200"
+            r="18"
+            fill="white"
+            stroke={color}
+            strokeWidth="2"
+          />
+          <text
+            x={step.x}
+            y="205"
+            textAnchor="middle"
+            fill={color}
+            fontSize="12"
+            fontWeight="bold"
+          >
+            {step.label}
+          </text>
+          {i < 3 && (
+            <path
+              d={`M${step.x + 22} 200 H${[150, 220, 290][i] - 22}`}
+              stroke={color}
+              strokeWidth="1.5"
+              strokeDasharray="4 3"
+              strokeOpacity="0.4"
+            />
+          )}
+        </g>
+      ))}
+
+      {/* Strategy document */}
+      <rect x="88" y="228" width="80" height="36" rx="4" fill="white" stroke={color} strokeWidth="1.5" />
+      <line x1="98" y1="240" x2="158" y2="240" stroke={color} strokeWidth="1.5" strokeOpacity="0.3" />
+      <line x1="98" y1="252" x2="140" y2="252" stroke={color} strokeWidth="1.5" strokeOpacity="0.2" />
+
+      {/* Architecture diagram */}
+      <rect x="192" y="228" width="80" height="36" rx="4" fill="white" stroke={color} strokeWidth="1.5" />
+      <rect x="202" y="238" width="20" height="16" rx="2" fill={color} fillOpacity="0.15" />
+      <rect x="228" y="238" width="20" height="16" rx="2" fill={color} fillOpacity="0.1" />
+      <line x1="222" y1="246" x2="228" y2="246" stroke={color} strokeWidth="1" />
     </svg>
   );
 }
 
 function AiWorkflowIllustration() {
+  const color = "#b45309";
   return (
-    <svg viewBox="0 0 360 280" className="h-full w-full p-6" aria-hidden="true">
+    <svg viewBox="0 0 360 280" className="h-full w-full" aria-hidden="true">
       <rect width="360" height="280" fill="#fff8ed" rx="16" />
-      <rect
-        x="130"
-        y="70"
-        width="100"
-        height="100"
-        rx="8"
-        fill="#b45309"
-        fillOpacity="0.08"
-        stroke="#b45309"
+
+      {/* Input */}
+      <rect x="48" y="108" width="64" height="64" rx="8" fill="white" stroke={color} strokeWidth="2" />
+      <rect x="60" y="122" width="40" height="6" rx="2" fill={color} fillOpacity="0.25" />
+      <rect x="60" y="134" width="32" height="6" rx="2" fill={color} fillOpacity="0.15" />
+      <rect x="60" y="146" width="36" height="6" rx="2" fill={color} fillOpacity="0.15" />
+      <text x="80" y="100" textAnchor="middle" fill={color} fontSize="10" fontWeight="bold">
+        INPUT
+      </text>
+
+      {/* Arrow 1 */}
+      <path
+        d="M118 140 H148 M142 134 L148 140 L142 146"
+        stroke={color}
         strokeWidth="2"
-      />
-      <rect
-        x="145"
-        y="85"
-        width="70"
-        height="70"
-        rx="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         fill="none"
-        stroke="#b45309"
-        strokeWidth="1.5"
       />
-      {[0, 45, 90, 135].map((angle, i) => (
+
+      {/* AI processor */}
+      <rect x="148" y="96" width="64" height="88" rx="8" fill={color} fillOpacity="0.1" stroke={color} strokeWidth="2" />
+      <circle cx="180" cy="132" r="18" fill="white" stroke={color} strokeWidth="1.5" />
+      {[0, 60, 120, 180, 240, 300].map((angle) => (
         <line
-          key={i}
-          x1={180 + Math.cos((angle * Math.PI) / 180) * 20}
-          y1={120 + Math.sin((angle * Math.PI) / 180) * 20}
-          x2={180 + Math.cos((angle * Math.PI) / 180) * 35}
-          y2={120 + Math.sin((angle * Math.PI) / 180) * 35}
-          stroke="#b45309"
-          strokeWidth="2"
+          key={angle}
+          x1={180 + Math.cos((angle * Math.PI) / 180) * 10}
+          y1={132 + Math.sin((angle * Math.PI) / 180) * 10}
+          x2={180 + Math.cos((angle * Math.PI) / 180) * 16}
+          y2={132 + Math.sin((angle * Math.PI) / 180) * 16}
+          stroke={color}
+          strokeWidth="1.5"
         />
       ))}
-      <circle cx="180" cy="120" r="10" fill="#b45309" fillOpacity="0.2" />
-      <circle
-        cx="70"
-        cy="120"
-        r="18"
-        fill="#b45309"
-        fillOpacity="0.1"
-        stroke="#b45309"
-        strokeWidth="1.5"
-      />
-      <circle
-        cx="290"
-        cy="120"
-        r="18"
-        fill="#b45309"
-        fillOpacity="0.1"
-        stroke="#b45309"
-        strokeWidth="1.5"
-      />
+      <circle cx="180" cy="132" r="5" fill={color} fillOpacity="0.35" />
+      <text x="180" y="168" textAnchor="middle" fill={color} fontSize="9" fontWeight="bold">
+        AI
+      </text>
+
+      {/* Arrow 2 */}
       <path
-        d="M88 120 H152 M208 120 H272"
-        stroke="#b45309"
-        strokeWidth="1.5"
-        strokeDasharray="4 4"
+        d="M218 140 H248 M242 134 L248 140 L242 146"
+        stroke={color}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
       />
+
+      {/* Output / insights */}
+      <rect x="248" y="108" width="64" height="64" rx="8" fill="white" stroke={color} strokeWidth="2" />
+      <path
+        d="M264 148 L276 132 L286 142 L298 122"
+        stroke={color}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <text x="280" y="100" textAnchor="middle" fill={color} fontSize="10" fontWeight="bold">
+        OUTPUT
+      </text>
+
+      {/* Automation loop below */}
+      <path
+        d="M100 220 H260"
+        stroke={color}
+        strokeWidth="1.5"
+        strokeDasharray="6 4"
+        strokeOpacity="0.4"
+      />
+      <rect x="130" y="228" width="100" height="28" rx="14" fill="white" stroke={color} strokeWidth="1.5" />
+      <text x="180" y="246" textAnchor="middle" fill={color} fontSize="10" fontWeight="bold">
+        Automate
+      </text>
     </svg>
   );
 }
