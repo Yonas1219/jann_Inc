@@ -3,7 +3,13 @@ import { ArrowRight, Mail } from "lucide-react";
 import { SectionBadge } from "@/components/section-badge";
 import { SiteContainer } from "@/components/site-container";
 
-export function HomeContact() {
+type HomeContactProps = {
+  description?: string;
+};
+
+export function HomeContact({
+  description = "Have a project in mind or want to learn more about our products? We'd love to hear from you.",
+}: HomeContactProps) {
   return (
     <section className="bg-background py-20 lg:py-28">
       <SiteContainer>
@@ -13,8 +19,7 @@ export function HomeContact() {
             Get in touch
           </h2>
           <p className="text-base sm:text-lg text-zinc-600 leading-relaxed mb-10 max-w-md mx-auto">
-            Have a project in mind or want to learn more about our products?
-            We&apos;d love to hear from you.
+            {description}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

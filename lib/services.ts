@@ -95,6 +95,7 @@ export const services: Service[] = [
 export const processSteps = [
   {
     number: "01",
+    displayNumber: "1",
     title: "Discovery",
     subtitle: "Understanding your needs",
     description:
@@ -104,15 +105,19 @@ export const processSteps = [
   },
   {
     number: "02",
+    displayNumber: "2",
     title: "Strategy",
     subtitle: "Planning the solution",
     description:
       "We develop a comprehensive strategy and roadmap tailored to your specific requirements and business goals.",
-    background: "#fff1f0",
-    accent: "#be4b3a",
+    background: "#faf0ff",
+    accent: "#7c3aed",
+    activeGradient:
+      "linear-gradient(160deg, #faf0ff 0%, #fce7f3 50%, #f5f0ff 100%)",
   },
   {
     number: "03",
+    displayNumber: "3",
     title: "Development",
     subtitle: "Building with precision",
     description:
@@ -122,6 +127,7 @@ export const processSteps = [
   },
   {
     number: "04",
+    displayNumber: "4",
     title: "Delivery & Growth",
     subtitle: "Continuous improvement",
     description:
