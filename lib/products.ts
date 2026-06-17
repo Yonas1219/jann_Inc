@@ -16,7 +16,7 @@ export const researchIntel: Product = {
   description:
     "A research workspace for finance professionals. Trending papers, AI briefings, and chat — all in one place.",
   tags: ["Finance", "AI", "Research"],
-  href: "https://researchintel.tech",
+  href: "https://www.researchintel.tech/",
   status: "live",
 };
 

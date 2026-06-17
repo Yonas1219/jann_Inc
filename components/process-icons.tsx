@@ -3,7 +3,10 @@ type ProcessIconProps = {
   color?: string;
 };
 
-export function DiscoveryIcon({ className, color = "#1a4d2e" }: ProcessIconProps) {
+export function DiscoveryIcon({
+  className,
+  color = "#1a4d2e",
+}: ProcessIconProps) {
   return (
     <svg
       viewBox="0 0 64 64"
@@ -36,7 +39,10 @@ export function DiscoveryIcon({ className, color = "#1a4d2e" }: ProcessIconProps
   );
 }
 
-export function StrategyIcon({ className, color = "#7c3aed" }: ProcessIconProps) {
+export function StrategyIcon({
+  className,
+  color = "#7c3aed",
+}: ProcessIconProps) {
   return (
     <svg
       viewBox="0 0 64 64"
@@ -68,7 +74,10 @@ export function StrategyIcon({ className, color = "#7c3aed" }: ProcessIconProps)
   );
 }
 
-export function DevelopmentIcon({ className, color = "#b45309" }: ProcessIconProps) {
+export function DevelopmentIcon({
+  className,
+  color = "#b45309",
+}: ProcessIconProps) {
   return (
     <svg
       viewBox="0 0 64 64"
@@ -76,13 +85,7 @@ export function DevelopmentIcon({ className, color = "#b45309" }: ProcessIconPro
       fill="none"
       aria-hidden="true"
     >
-      <circle
-        cx="32"
-        cy="32"
-        r="10"
-        stroke={color}
-        strokeWidth="2.5"
-      />
+      <circle cx="32" cy="32" r="10" stroke={color} strokeWidth="2.5" />
       <path
         d="M32 14 L32 22 M32 42 L32 50 M14 32 L22 32 M42 32 L50 32"
         stroke={color}
@@ -100,7 +103,10 @@ export function DevelopmentIcon({ className, color = "#b45309" }: ProcessIconPro
   );
 }
 
-export function DeliveryIcon({ className, color = "#1a4d2e" }: ProcessIconProps) {
+export function DeliveryIcon({
+  className,
+  color = "#1a4d2e",
+}: ProcessIconProps) {
   return (
     <svg
       viewBox="0 0 64 64"
