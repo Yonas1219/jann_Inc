@@ -10,8 +10,8 @@ export function OurStory() {
         aria-hidden="true"
       />
       <SiteContainer className="relative">
-        <FadeIn>
-          <div>
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
+          <FadeIn>
             <SectionBadge>Story</SectionBadge>
             <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-foreground mb-6">
               Our Story
@@ -27,14 +27,21 @@ export function OurStory() {
                 solving. That&apos;s still how we think today: focused,
                 intentional, and obsessed with getting the details right.
               </p>
-              <p className="text-foreground font-medium">
-                Jann Inc was built on a simple belief: great software should
-                just work. No bloat, no noise, just tools that do exactly what
-                they promise.
-              </p>
             </div>
-          </div>
-        </FadeIn>
+          </FadeIn>
+
+          <FadeIn delay={0.1}>
+            <blockquote className="border-l-[3px] border-green-mid pl-6 sm:pl-8">
+              <p className="font-serif text-2xl sm:text-3xl italic text-foreground leading-snug">
+                No bloat, no noise. Just tools that do exactly what they
+                promise.
+              </p>
+              <footer className="mt-5 text-sm text-muted-foreground">
+                — Jann Inc
+              </footer>
+            </blockquote>
+          </FadeIn>
+        </div>
       </SiteContainer>
     </section>
   );
